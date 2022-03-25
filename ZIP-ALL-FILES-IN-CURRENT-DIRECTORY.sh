@@ -9,6 +9,15 @@ val2="$(zenity --list \
     FALSE special_zip --radiolist)"
 
 mkdir ${result} && cp * ${result}/
+# if [[$? -ne 0]];then
+# echo "$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS" | while read 'file'
+# do
+#     var=$(echo -n "$file" | sed 's/.*\///')
+#     cp "$var" ${result}/
+#     cat "$file" >> "pp"
+# done
+#
+# fi
 
 if [[ $? -ne 0  ]]; then
     
